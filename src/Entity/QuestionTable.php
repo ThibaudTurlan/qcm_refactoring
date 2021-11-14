@@ -63,5 +63,89 @@ class QuestionTable
      */
     private $goodReply;
 
+    public function getIdQestion(): ?int
+    {
+        return $this->idQestion;
+    }
+
+    public function getQuestion(): ?string
+    {
+        return $this->question;
+    }
+
+    public function setQuestion(string $question): self
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    public function getReply1(): ?string
+    {
+        return $this->reply1;
+    }
+
+    public function setReply1(string $reply1): self
+    {
+        $this->reply1 = $reply1;
+
+        return $this;
+    }
+
+    public function getReply2(): ?string
+    {
+        return $this->reply2;
+    }
+
+    public function setReply2(string $reply2): self
+    {
+        $this->reply2 = $reply2;
+
+        return $this;
+    }
+
+    public function getReply3(): ?string
+    {
+        return $this->reply3;
+    }
+
+    public function setReply3(string $reply3): self
+    {
+        $this->reply3 = $reply3;
+
+        return $this;
+    }
+
+    public function getReply4(): ?string
+    {
+        return $this->reply4;
+    }
+
+    public function setReply4(string $reply4): self
+    {
+        $this->reply4 = $reply4;
+
+        return $this;
+    }
+
+    public function getGoodReply(): ?string
+    {
+        return $this->goodReply;
+    }
+
+    public function setGoodReply(string $goodReply): self
+    {
+        $this->goodReply = $goodReply;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->reply1;
+//        return $this->reply2;
+//        return $this->reply3;
+//        return $this->reply4;
+    }
 
 }

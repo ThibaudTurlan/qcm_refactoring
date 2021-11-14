@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * QcmTable
  *
- * @ORM\Table(name="qcm_table", indexes={@ORM\Index(name="fk_qcm_table_user1_idx", columns={"user_id_user"}), @ORM\Index(name="fk_qcm_table_question_table1_idx", columns={"question_table_id_qestion"})})
+ * @ORM\Table(name="qcm_table", indexes={@ORM\Index(name="fk_qcm_table_question_table1_idx", columns={"question_table_id_qestion"}), @ORM\Index(name="fk_qcm_table_user1_idx", columns={"user_id_user"})})
  * @ORM\Entity
  */
 class QcmTable
@@ -61,6 +61,71 @@ class QcmTable
      * })
      */
     private $userIdUser;
+
+    public function getIdQcm(): ?int
+    {
+        return $this->idQcm;
+    }
+
+    public function getTitleMovie(): ?string
+    {
+        return $this->titleMovie;
+    }
+
+    public function setTitleMovie(string $titleMovie): self
+    {
+        $this->titleMovie = $titleMovie;
+
+        return $this;
+    }
+
+    public function getPosterMovie(): ?string
+    {
+        return $this->posterMovie;
+    }
+
+    public function setPosterMovie(?string $posterMovie): self
+    {
+        $this->posterMovie = $posterMovie;
+
+        return $this;
+    }
+
+    public function getDateAt(): ?\DateTimeInterface
+    {
+        return $this->dateAt;
+    }
+
+    public function setDateAt(?\DateTimeInterface $dateAt): self
+    {
+        $this->dateAt = $dateAt;
+
+        return $this;
+    }
+
+    public function getQuestionTableIdQestion(): ?QuestionTable
+    {
+        return $this->questionTableIdQestion;
+    }
+
+    public function setQuestionTableIdQestion(?QuestionTable $questionTableIdQestion): self
+    {
+        $this->questionTableIdQestion = $questionTableIdQestion;
+
+        return $this;
+    }
+
+    public function getUserIdUser(): ?User
+    {
+        return $this->userIdUser;
+    }
+
+    public function setUserIdUser(?User $userIdUser): self
+    {
+        $this->userIdUser = $userIdUser;
+
+        return $this;
+    }
 
 
 }

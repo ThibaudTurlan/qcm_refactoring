@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion | QCM Land{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+
+{#<div class="col-md-3">{{ form_row(questionTableIdQestion) }}</div>#}
+    {{form_rest(form)}}
+<button class="btn btn-primary">{{ button| default('Enregister')  }}</button>
+{{ form_end(form) }}
+{% endblock %}
